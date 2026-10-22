@@ -1,4 +1,4 @@
-package com.example.practica_mensual.vista
+package com.example.practica_mensual.vista.Vista
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
