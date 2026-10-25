@@ -3,15 +3,12 @@ package com.example.practica_mensual.presentador
 import com.example.practica_mensual.modelo.clsCarreraModelo
 import com.example.practica_mensual.modelo.clsCursoModelo
 import com.example.practica_mensual.modelo.dataCategorias
-import com.example.practica_mensual.vistaa.MainActivity
-import com.google.android.material.shape.InterpolateOnScrollPositionChangeHelper
+import com.example.practica_mensual.vistaa.VerRegistros
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
-import kotlin.coroutines.coroutineContext
 
-class clsCarreraPresentador(private val vistaa: MainActivity) {
+class clsCarreraPresentador(private val vistaa: VerRegistros) {
     private val modeloCarrera = clsCarreraModelo()
     private val modeloCurso = clsCursoModelo()
     private var listaCarreras: List<dataCategorias> = emptyList()
