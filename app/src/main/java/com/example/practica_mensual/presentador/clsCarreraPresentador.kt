@@ -24,13 +24,15 @@ class clsCarreraPresentador(private val vistaa: VerRegistros) {
         }
     }
 
-    fun seleccionarCarrera(posicion: Int){
-        if(posicion >= 0 && posicion < listaCarreras.size){
-            val carrera = listaCarreras[posicion]
-            vistaa.mostrarMensajeExito(carrera.id, carrera.carrera)
+    fun seleccionarCarrera(idCarrera: Int){
+        val carrera = listaCarreras.find { it.id == idCarrera }
 
-            obtenerEstadoInscripciones(carrera.id)
+        if (carrera != null) {
+            vistaa.mostrarMensajeExito(carrera.id, carrera.carrera)
+        } else {
+            vistaa.mostrarMensajeExito(idCarrera, "Todas las carreras")
         }
+        obtenerEstadoInscripciones(idCarrera)
     }
 
     fun obtenerEstadoInscripciones(carreraId: Int) {
