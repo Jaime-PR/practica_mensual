@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Imagen representativa del curso -->
+        <ImageView
+            android:id="@+id/imgCurso"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0" />
+
+        <!-- Contenedor de textos y barra de progreso -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/txtNombreCurso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PROGRAMACIÓN AVANZADA"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#222222" />
+
+            <!-- Barra de progreso de inscritos -->
+            <ProgressBar
+                android:id="@+id/progressCurso"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="8dp"
+                android:max="50"
+                android:progress="48"
+                android:progressTint="#154273" />
+
+            <!-- Detalle numérico -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/txtInscritos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="48 inscritos"
+                    android:textSize="12sp"
+                    android:textColor="#555555" />
+
+                <TextView
+                    android:id="@+id/txtTotalCurso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="/ 50 total"
+                    android:textAlignment="textEnd"
+                    android:textSize="12sp"
+                    android:textColor="#777777" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
