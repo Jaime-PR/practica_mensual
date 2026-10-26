@@ -22,7 +22,6 @@ class CursoAdapter(private var listaCursos: List<dataCursosRegistros>) : Recycle
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CursoViewHolder {
-        // Estilo exacto de la presentación con parámetros nombrados
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_curso_registro,  parent, false)
         return CursoViewHolder(itemView = view)
     }
@@ -38,8 +37,8 @@ class CursoAdapter(private var listaCursos: List<dataCursosRegistros>) : Recycle
 
 
         Glide.with(holder.itemView.context)
-            .load("http://172.20.10.2/cursos_api/" + curso.urlImagenPrincipal) // O la propiedad que tenga la ruta en tu modelo
-            .placeholder(android.R.drawable.ic_menu_gallery) // Imagen temporal mientras carga
+            .load("http://172.20.10.2/cursos_api/" + curso.urlImagenPrincipal)
+            .placeholder(android.R.drawable.ic_menu_gallery)
             .into(holder.imgCurso)
     }
 

@@ -38,10 +38,8 @@ class clsCarreraPresentador(private val vistaa: VerRegistros) {
     fun obtenerEstadoInscripciones(carreraId: Int) {
         CoroutineScope(Dispatchers.Main).launch {
             try {
-                // Llamamos a tu nuevo modelo (clsCursoModelo)
                 val respuesta = modeloCurso.obtenerEstadoInscripciones(carreraId)
 
-                // Enviamos el total general y la lista a la vista (MainActivity)
                 vistaa.mostrarEstadoInscripciones(respuesta.totalGeneralInscritos, respuesta.cursos)
 
             } catch (e: Exception) {

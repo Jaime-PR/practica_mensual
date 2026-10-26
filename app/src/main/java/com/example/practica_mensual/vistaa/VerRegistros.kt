@@ -36,21 +36,18 @@ class VerRegistros : AppCompatActivity() {
             insets
         }
 
-        spinnerCarreras = findViewById(R.id.spinnerCarreras) // Ajusta el ID según tu XML
-        recyclerViewCursos = findViewById(R.id.recyclerCursos)   // Ajusta el ID según tu XML
+        spinnerCarreras = findViewById(R.id.spinnerCarreras)
+        recyclerViewCursos = findViewById(R.id.recyclerCursos)
         txtTotalGeneral = findViewById(R.id.txtTotal)
 
-        // Configurar RecyclerView
         recyclerViewCursos.layoutManager = LinearLayoutManager(this)
         cursoAdapter = CursoAdapter(emptyList())
         recyclerViewCursos.adapter = cursoAdapter
 
-        // Inicializar Presentador (pasándole esta Activity como Vista)
         presenter = clsCarreraPresentador(this)
 
         configurarListeners()
 
-        // Iniciar la carga de las categorías/carreras para el Spinner
         presenter.iniciar()
     }
 
@@ -62,10 +59,8 @@ class VerRegistros : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                // Obtenemos el objeto completo de la posición seleccionada
                 val carreraSeleccionada = parent?.getItemAtPosition(position) as dataCategorias
 
-                // Le pasamos el ID real al presentador
                 presenter.seleccionarCarrera(carreraSeleccionada.id)
             }
 
@@ -85,10 +80,8 @@ class VerRegistros : AppCompatActivity() {
     }
 
     fun mostrarEstadoInscripciones(totalGeneral: Int, listaCursos: List<dataCursosRegistros>) {
-        // Pintamos el número total de inscritos en la parte superior
         txtTotalGeneral.text = "Total General de Inscritos: $totalGeneral"
 
-        // Actualizamos las tarjetas y barras de progreso del RecyclerView
         cursoAdapter.actualizarLista(listaCursos)
     }
 
