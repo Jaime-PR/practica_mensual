@@ -1,3 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">practica_mensual</string>
+    <string name="confirmar_inscripci_n">CONFIRMAR INSCRIPCIÓN</string>
+    <string name="ejemplo_universidad_edu">ejemplo@universidad.edu</string>
+    <string name="correo_institucional">CORREO INSTITUCIONAL:</string>
+    <string name="dd_mm_aaaa">dd/mm/aaaa</string>
+    <string name="fecha_de_registro">FECHA DE REGISTRO:</string>
+    <string name="ej_20251015">Ej. 20251015</string>
+    <string name="matr_cula_del_alumno">MATRÍCULA DEL ALUMNO:</string>
+    <string name="programaci_n_navanzada">PROGRAMACIÓN\nAVANZADA</string>
+    <string name="imagen_del_curso">Imagen del curso</string>
+    <string name="regresar">Regresar</string>
+    <string name="cancel">CANCEL</string>
+    <string name="inscripci_n_nprogramaci_n_avanzada">INSCRIPCIÓN:\nPROGRAMACIÓN AVANZADA</string>
+    <string name="registro_al_curso">REGISTRO AL CURSO</string>
+    <string name="btnregresar">btnRegresar</string>
+
+    <!-- Claves agregadas para resolver el color rojo -->
+    <string name="inscripcion_label">INSCRIPCIÓN:</string>
+    <string name="nombre_del_alumno_label">NOMBRE DEL ALUMNO:</string>
+    <string name="hint_nombre_alumno">Ej. Juan Pérez</string>
 </resources>
