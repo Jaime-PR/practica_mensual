@@ -34,7 +34,7 @@
 
             <!-- Nombre del curso: Altura fija y máximo 2 líneas para alinear todas las tarjetas -->
             <TextView
-                android:id="@+id/txtNombreCurso"
+                android:id="@+id/txtMostrarNombreCurso"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="6dp"
