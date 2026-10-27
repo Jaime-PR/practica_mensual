@@ -1,9 +1,11 @@
 package com.example.practica_mensual.vistaa
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var presenter: clsCatalogoPresentador
     private lateinit var spinnerCatalogo: Spinner
     private lateinit var recyclerCursos : RecyclerView
+    private lateinit var btnVerRegistros : Button
     private lateinit var adapaterCursos: CursosCatAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         spinnerCatalogo = findViewById(R.id.spnCarrera)
         recyclerCursos = findViewById(R.id.rvCursos)
+        btnVerRegistros = findViewById(R.id.btnVerRegistros)
 
         recyclerCursos.layoutManager = GridLayoutManager(this, 2)
         adapaterCursos = CursosCatAdapter(this, emptyList())
@@ -46,6 +50,13 @@ class MainActivity : AppCompatActivity() {
         presenter = clsCatalogoPresentador(this)
         configurarListeners()
         presenter.iniciar()
+
+        btnVerRegistros.setOnClickListener(this:: abrirVerRegistros)
+    }
+
+    fun abrirVerRegistros(v: View){
+        val intent = Intent(this, VerRegistros::class.java)
+        startActivity(intent)
     }
 
     fun configurarListeners(){
