@@ -27,7 +27,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/txtNombreCurso"
+                android:id="@+id/txtMostrarNombreCurso"
                 android:layout_width="match_parent"
                 android:layout_height="27dp"
                 android:layout_gravity="center_horizontal"

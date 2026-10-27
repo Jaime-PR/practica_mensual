@@ -15,7 +15,7 @@ class CursoAdapter(private var listaCursos: List<dataCursosRegistros>) : Recycle
 
     class CursoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgCurso: ImageView = itemView.findViewById(R.id.imgCurso)
-        val txtNombreCurso: TextView = itemView.findViewById(R.id.txtNombreCurso)
+        val txtNombreCurso: TextView = itemView.findViewById(R.id.txtMostrarNombreCurso)
         val progressCurso: ProgressBar = itemView.findViewById(R.id.progressCurso)
         val txtInscritos: TextView = itemView.findViewById(R.id.txtInscritos)
         val txtTotalCurso: TextView = itemView.findViewById(R.id.txtTotalCurso)
