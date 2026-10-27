@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
     fun configurarListeners(){
         spinnerCatalogo.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val carreraSeleccionada = parent?.getItemAtPosition(position) as dataCatalogo
                 presenter.seleccionarCatalogo(position)
             }
 
