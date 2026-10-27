@@ -3,68 +3,99 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dp">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="85dp" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
 
+            <!-- Imagen con tamaño fijo -->
             <ImageView
                 android:id="@+id/imgCurso"
-                android:layout_width="157dp"
-                android:layout_height="wrap_content"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
+                android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
+            <!-- Nombre del curso: Altura fija y máximo 2 líneas para alinear todas las tarjetas -->
             <TextView
                 android:id="@+id/txtNombreCurso"
                 android:layout_width="match_parent"
-                android:layout_height="27dp"
-                android:layout_gravity="center_horizontal"
-                android:text="TextView"
-                android:textSize="16sp"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="Nombre del Curso"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
+            <!-- Salón: Altura fija y 1 sola línea -->
             <TextView
                 android:id="@+id/txtSalon"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:foregroundGravity="center_vertical"
-                android:text="TextView"
-                android:textSize="12sp" />
+                android:layout_height="18dp"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Salón: A-101"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="11sp" />
 
+            <!-- Botones alineados en la parte inferior -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnDetalle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:backgroundTint="#3F51B5"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingHorizontal="2dp"
+                    android:paddingVertical="0dp"
                     android:text="Detalle"
-                    app:iconTint="#2196F3" />
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    app:cornerRadius="4dp" />
 
                 <Button
                     android:id="@+id/btnRegistro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="2dp"
                     android:layout_weight="1"
                     android:backgroundTint="#4CAF50"
-                    android:text="Registrarse"
-                    app:rippleColor="#4CAF50" />
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingHorizontal="2dp"
+                    android:paddingVertical="0dp"
+                    android:text="Registro"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    app:cornerRadius="4dp" />
             </LinearLayout>
 
         </LinearLayout>

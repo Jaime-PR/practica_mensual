@@ -23,6 +23,7 @@
     <string name="inscripci_n_nprogramaci_n_avanzada">INSCRIPCIÓN:\nPROGRAMACIÓN AVANZADA</string>
     <string name="registro_al_curso">REGISTRO AL CURSO</string>
     <string name="btnregresar">btnRegresar</string>
+    <string name="imagen_del_curso">Imagen del curso</string>
 
     <!-- Claves agregadas para resolver el color rojo -->
     <string name="inscripcion_label">INSCRIPCIÓN:</string>
