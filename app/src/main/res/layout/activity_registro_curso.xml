@@ -61,7 +61,7 @@
             <TextView
                 android:id="@+id/tvInscripcionLabel"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:letterSpacing="0.04"
@@ -217,7 +217,7 @@
                 android:layout_marginTop="6dp"
                 android:autofillHints="emailAddress"
                 android:background="@drawable/bg_campo"
-                android:hint="@string/ejemplo_universidad_edu"
+                android:hint="20281015@uthh.edu.mx"
                 android:inputType="textEmailAddress"
                 android:paddingHorizontal="16dp"
                 android:textColor="#1B1F27"
