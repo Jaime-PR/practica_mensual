@@ -14,6 +14,7 @@ class clsCatalogoPresentador(private val vista: MainActivity) {
     private val modeloCursos = clsCursoCatModelo()
     private var listaCatalogo: List<dataCatalogo> = emptyList()
 
+
     fun iniciar(){
         CoroutineScope(Dispatchers.Main).launch {
             try {
@@ -43,5 +44,4 @@ class clsCatalogoPresentador(private val vista: MainActivity) {
             }
         }
     }
-
 }
