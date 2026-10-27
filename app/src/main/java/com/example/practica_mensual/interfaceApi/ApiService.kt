@@ -2,6 +2,7 @@ package com.example.practica_mensual.interfaceApi
 
 import com.example.practica_mensual.modelo.dataRespuestaInscripciones
 import com.example.practica_mensual.modelo.dataCategorias
+import com.example.practica_mensual.modelo.dataImagenesCurso
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,4 +12,9 @@ interface ApiService {
 
     @GET("obtener_estado_inscripciones.php")
     suspend fun obtenerEstadoInscripciones(@Query("carrera_id") carreraId: Int): dataRespuestaInscripciones
+
+    @GET("detalle_curso.php")
+    suspend fun obtenerDetalleCurso(
+        @Query("curso_id") cursoId: Int
+    ): List<dataImagenesCurso>
 }
