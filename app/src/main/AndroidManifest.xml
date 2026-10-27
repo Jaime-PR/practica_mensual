@@ -13,8 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Practica_mensual"
         android:usesCleartextTraffic="true">
+
         <activity
-            android:name=".vistaa.VerRegistros"
+            android:name=".vistaa.VistaDetalleActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -23,10 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".vistaa.MainActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>
