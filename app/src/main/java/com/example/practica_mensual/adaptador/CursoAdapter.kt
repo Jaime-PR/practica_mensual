@@ -37,7 +37,7 @@ class CursoAdapter(private var listaCursos: List<dataCursosRegistros>) : Recycle
 
 
         Glide.with(holder.itemView.context)
-            .load("http://192.168.0.132/cursos_api/" + curso.urlImagenPrincipal)
+            .load("http://192.168.137.165/cursos_api/" + curso.urlImagenPrincipal)
             .placeholder(android.R.drawable.ic_menu_gallery)
             .into(holder.imgCurso)
     }

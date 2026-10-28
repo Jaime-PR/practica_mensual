@@ -75,7 +75,7 @@ class VistaDetalleActivity : AppCompatActivity(), clsDetallePresentador.VistaDet
 
     override fun mostrarGaleria(imagenes: List<dataImagenesCurso>) {
         if (imagenes.isNotEmpty()) {
-            val urlCompleta = "http://192.168.1.11/cursos_api/" + imagenes[0].url_imagen
+            val urlCompleta = "http://192.168.137.165/cursos_api/" + imagenes[0].url_imagen
 
             Glide.with(this)
                 .load(urlCompleta)

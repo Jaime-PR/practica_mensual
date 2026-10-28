@@ -41,7 +41,7 @@ class CursosCatAdapter(
         holder.tvNombre.text = curso.nombre
         holder.tvSalon.text = "Salon: " + curso.espacio.toString()
 
-        val baseURL = "http://192.168.0.132/cursos_api/"
+        val baseURL = "http://192.168.137.165/cursos_api/"
         val urlImagenCompleta = baseURL + curso.urlImgPrincipal
         Glide.with(holder.itemView.context)
             .load(urlImagenCompleta)

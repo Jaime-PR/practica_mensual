@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -25,6 +26,7 @@ class VerRegistros : AppCompatActivity() {
     private lateinit var recyclerViewCursos: RecyclerView
     private lateinit var cursoAdapter: CursoAdapter
     private lateinit var txtTotalGeneral: TextView
+    private lateinit var btnVolverCatalogo: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +41,7 @@ class VerRegistros : AppCompatActivity() {
         spinnerCarreras = findViewById(R.id.spinnerCarreras)
         recyclerViewCursos = findViewById(R.id.recyclerCursos)
         txtTotalGeneral = findViewById(R.id.txtTotal)
+        btnVolverCatalogo = findViewById(R.id.btnVolverCatalogo)
 
         recyclerViewCursos.layoutManager = LinearLayoutManager(this)
         cursoAdapter = CursoAdapter(emptyList())
@@ -49,6 +52,11 @@ class VerRegistros : AppCompatActivity() {
         configurarListeners()
 
         presenter.iniciar()
+        btnVolverCatalogo.setOnClickListener(this:: volverCatalogo)
+    }
+
+    fun volverCatalogo(v: View){
+        finish()
     }
 
     private fun configurarListeners(){
