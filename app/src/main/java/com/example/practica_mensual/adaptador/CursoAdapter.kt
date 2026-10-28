@@ -15,7 +15,7 @@ class CursoAdapter(private var listaCursos: List<dataCursosRegistros>) : Recycle
 
     class CursoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgCurso: ImageView = itemView.findViewById(R.id.imgCurso)
-        val txtNombreCurso: TextView = itemView.findViewById(R.id.txtNombreCurso)
+        val txtNombreCurso: TextView = itemView.findViewById(R.id.txtMostrarNombreCurso)
         val progressCurso: ProgressBar = itemView.findViewById(R.id.progressCurso)
         val txtInscritos: TextView = itemView.findViewById(R.id.txtInscritos)
         val txtTotalCurso: TextView = itemView.findViewById(R.id.txtTotalCurso)
@@ -37,7 +37,7 @@ class CursoAdapter(private var listaCursos: List<dataCursosRegistros>) : Recycle
 
 
         Glide.with(holder.itemView.context)
-            .load("http://172.20.10.2/cursos_api/" + curso.urlImagenPrincipal)
+            .load("http://192.168.0.132/cursos_api/" + curso.urlImagenPrincipal)
             .placeholder(android.R.drawable.ic_menu_gallery)
             .into(holder.imgCurso)
     }
