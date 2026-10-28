@@ -26,7 +26,7 @@ interface ApiService {
     @GET("obtener_estado_inscripciones.php")
     suspend fun obtenerEstadoInscripciones(@Query("carrera_id") carreraId: Int): dataRespuestaInscripciones
 
-    @GET("detalle_curso.php")
+    @GET("detalle_cursos.php")
     suspend fun obtenerDetalleCurso(
         @Query("curso_id") cursoId: Int
     ): List<dataImagenesCurso>
