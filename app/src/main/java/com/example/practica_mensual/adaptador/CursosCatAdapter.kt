@@ -13,6 +13,8 @@ import com.example.practica_mensual.R
 import com.example.practica_mensual.modelo.dataCursos
 import com.example.practica_mensual.vistaa.MainActivity
 import com.example.practica_mensual.vistaa.VistaDetalleActivity
+import com.example.practica_mensual.vistaa.RegistroCursoActivity
+
 
 class CursosCatAdapter(
     private val activity: MainActivity,
@@ -20,12 +22,13 @@ class CursosCatAdapter(
 ) : RecyclerView.Adapter<CursosCatAdapter.CursoViewHolder>() {
 
     class CursoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvNombre: TextView = itemView.findViewById(R.id.txtNombreCurso)
+        val tvNombre: TextView = itemView.findViewById(R.id.txtMostrarNombreCurso)
         val tvSalon: TextView = itemView.findViewById(R.id.txtSalon)
         val imgCurso: ImageView = itemView.findViewById(R.id.imgCurso)
 
 
         val btnDetalle: Button = itemView.findViewById(R.id.btnDetalle)
+        val btnRegistro: Button =itemView.findViewById(R.id.btnRegistro)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CursoViewHolder {
@@ -61,6 +64,14 @@ class CursosCatAdapter(
             }
             activity.startActivity(intent)
         }
+        holder.btnRegistro.setOnClickListener {
+            val intent = Intent(activity, RegistroCursoActivity::class.java).apply {
+                putExtra("CURSO_ID", curso.id)
+                putExtra("NOMBRE_CURSO", curso.nombre)
+            }
+            activity.startActivity(intent)
+        }
+
     }
 
     override fun getItemCount(): Int {

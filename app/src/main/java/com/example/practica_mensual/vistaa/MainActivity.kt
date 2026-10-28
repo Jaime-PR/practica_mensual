@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         spinnerCatalogo = findViewById(R.id.spnCarrera)
         recyclerCursos = findViewById(R.id.rvCursos)
         btnVerRegistros = findViewById(R.id.btnVerRegistros)
+        
 
         recyclerCursos.layoutManager = GridLayoutManager(this, 2)
         adapaterCursos = CursosCatAdapter(this, emptyList())
