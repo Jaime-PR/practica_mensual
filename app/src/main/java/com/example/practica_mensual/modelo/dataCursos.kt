@@ -12,6 +12,7 @@ data class dataCursos(
     @SerialName("descripcion") val descripcion: String = "",
     @SerialName("espacio") val espacio: String = "",
     @SerialName("total_horas") val total_horas: String = "",
+    @SerialName("dias_atencion") val dias: String = "",
     @SerialName("horario") val horario: String = "",
     @SerialName("cupo") val cupo: String = "",
     @SerialName("url_imagen_principal") val urlImgPrincipal: String = "",
