@@ -30,7 +30,6 @@
             android:exported="false" />
 
         <activity android:name=".vistaa.VerRegistros" />
-        <activity android:name=".vistaa.VistaDetalleActivity" />
 
         <activity android:name=".vistaa.VistaDetalleActivity" />
 
