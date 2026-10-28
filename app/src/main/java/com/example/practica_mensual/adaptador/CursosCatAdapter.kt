@@ -49,9 +49,15 @@ class CursosCatAdapter(
         holder.btnDetalle.setOnClickListener {
 
             val intent = Intent(activity, VistaDetalleActivity::class.java).apply {
-
                 putExtra("CURSO_ID", curso.id)
                 putExtra("NOMBRE_CURSO", curso.nombre)
+                putExtra("CODIGO_CURSO", curso.codigo)
+                putExtra("DESCRIPCION", curso.descripcion)
+                putExtra("ESPACIO", curso.espacio)
+                putExtra("TOTAL_HORAS", curso.total_horas)
+                putExtra("DIAS_ATENCION", curso.dias)
+                putExtra("HORARIO", curso.horario)
+                putExtra("CUPO", curso.cupo)
             }
             activity.startActivity(intent)
         }
