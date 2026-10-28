@@ -31,7 +31,7 @@ interface ApiService {
         @Query("curso_id") cursoId: Int
     ): List<dataImagenesCurso>
 
-    @POST("registrar_curso.php")
+    @POST("registar_inscripcion.php")
     suspend fun registrarCurso(
         @Body request: dataRegistroCurso
     ): Response<dataRespuestaInscripciones>

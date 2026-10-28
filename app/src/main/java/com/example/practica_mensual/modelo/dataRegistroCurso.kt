@@ -5,9 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class dataRegistroCurso(
-    @SerialName("curso_id")
-    val cursoId: Int,
-    val matricula: String,
-    @SerialName("fecha_registro")
-    val fechaRegistro: String
+    @SerialName("id_curso") val cursoId: Int,
+    @SerialName("matricula") val matricula: String,
+    @SerialName("fecha_registro") val fechaRegistro: String
 )
