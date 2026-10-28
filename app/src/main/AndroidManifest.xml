@@ -25,7 +25,13 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".vistaa.RegistroCursoActivity"
+            android:exported="false" />
+
         <activity android:name=".vistaa.VerRegistros" />
+        <activity android:name=".vistaa.VistaDetalleActivity" />
+
         <activity android:name=".vistaa.VistaDetalleActivity" />
 
     </application>
