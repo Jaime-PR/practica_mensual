@@ -106,8 +106,8 @@ class RegistroCursoActivity : AppCompatActivity() {
     fun mostrarImagenCurso(urlImagen: String) {
         Glide.with(this)
             .load(urlImagen)
-            .placeholder(R.drawable.ic_launcher_background)
-            .error(R.drawable.ic_launcher_background)
+            .placeholder(android.R.drawable.ic_menu_gallery)
+            .error(android.R.drawable.stat_notify_error)
             .into(imgCurso)
     }
 
@@ -120,7 +120,7 @@ class RegistroCursoActivity : AppCompatActivity() {
         val datePicker = android.app.DatePickerDialog(
             this,
             { _, year, monthOfYear, dayOfMonth ->
-                val fechaSeleccionada = String.format("%04d-%02d-%02d", year, monthOfYear + 1, dayOfMonth)
+                val fechaSeleccionada = String.format(java.util.Locale.getDefault(),"%04d-%02d-%02d", year, monthOfYear + 1, dayOfMonth)
                 txtFechaRegistro.setText(fechaSeleccionada)
             },
             anio,
