@@ -104,8 +104,15 @@ class RegistroCursoActivity : AppCompatActivity() {
     }
 
     fun mostrarImagenCurso(urlImagen: String) {
+        val baseUrl = "http://172.20.10.2/cursos_api/"
+        val urlCompleta = if (urlImagen.startsWith("http://") || urlImagen.startsWith("https://")) {
+            urlImagen
+        } else {
+            baseUrl + urlImagen
+        }
+
         Glide.with(this)
-            .load(urlImagen)
+            .load(urlCompleta)
             .placeholder(android.R.drawable.ic_menu_gallery)
             .error(android.R.drawable.stat_notify_error)
             .into(imgCurso)
