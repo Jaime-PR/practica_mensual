@@ -19,4 +19,8 @@ class clsRegistroCurso {
     suspend fun obtenerAlumno(matricula: String): Response<dataAlumnoResponse> {
         return RetroFitAlumno.apiService.obtenerAlumnoPorMatricula(matricula)
     }
+
+    suspend fun obtenerDetalleCurso(cursoId: Int): List<dataImagenesCurso>{
+        return RetroFitAlumno.apiService.obtenerDetalleCurso(cursoId)
+    }
 }
