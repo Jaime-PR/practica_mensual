@@ -3,7 +3,6 @@ package com.example.practica_mensual.modelo
 import retrofit2.Response
 
 class clsRegistroCurso {
-
     suspend fun registrarAlumnoCurso(
         cursoId: Int,
         matricula: String,
