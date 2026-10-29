@@ -65,7 +65,7 @@ class RegistroCursoActivity : AppCompatActivity() {
 
         txtNombreCurso.text = nombreCurso
         tvNombreCursoTitulo?.text = nombreCurso
-        presenter.cargarDatosCurso(nombreCurso, urlImagen)
+        presenter.cargarDatosCurso(cursoId, nombreCurso, urlImagen)
 
         txtMatricula.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}

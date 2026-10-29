@@ -68,6 +68,7 @@ class CursosCatAdapter(
             val intent = Intent(activity, RegistroCursoActivity::class.java).apply {
                 putExtra("CURSO_ID", curso.id)
                 putExtra("NOMBRE_CURSO", curso.nombre)
+                putExtra("IMAGEN_CURSO", curso.urlImgPrincipal)
             }
             activity.startActivity(intent)
         }

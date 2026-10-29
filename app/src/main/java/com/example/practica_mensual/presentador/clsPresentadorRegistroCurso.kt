@@ -12,9 +12,20 @@ class clsPresentadorRegistroCurso(private val view: RegistroCursoActivity) {
 
     private val modelo = clsRegistroCurso()
 
-    fun cargarDatosCurso(nombreCurso: String, urlImagen: String) {
+    fun cargarDatosCurso(cursoId: Int, nombreCurso: String, urlImagen: String) {
         if (urlImagen.isNotEmpty()) {
             view.mostrarImagenCurso(urlImagen)
+        } else if (cursoId > 0){
+            CoroutineScope(Dispatchers.Main).launch {
+                try {
+                    val imagenes = withContext(Dispatchers.IO){
+                        modelo.obtenerDetalleCurso(cursoId)
+                    }
+                    if(imagenes.isNotEmpty()){
+                        view.mostrarImagenCurso(imagenes[0].url_imagen)
+                    }
+                }catch (e: Exception){}
+            }
         }
     }
 
