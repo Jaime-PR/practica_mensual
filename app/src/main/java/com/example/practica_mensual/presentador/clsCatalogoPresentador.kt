@@ -29,7 +29,6 @@ class clsCatalogoPresentador(private val vista: MainActivity) {
     fun seleccionarCatalogo(posicion: Int){
         if(posicion >= 0 && posicion < listaCatalogo.size){
             val catalogo = listaCatalogo[posicion]
-            vista.mostrarMensajeExito(catalogo.id, catalogo.carrera)
             cargarCurso(catalogo.id)
         }
     }

@@ -81,9 +81,6 @@ class MainActivity : AppCompatActivity() {
         adapaterCursos.actualizarLista(cursos)
     }
 
-    fun mostrarMensajeExito(id: Int, nombre: String){
-        Toast.makeText(this, "ID: " + id.toString() + " Seleccionaste: " + nombre, Toast.LENGTH_SHORT).show()
-    }
 
     fun mostrarError(mensaje: String){
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
