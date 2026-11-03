@@ -60,7 +60,7 @@ class clsPresentadorRegistroCurso(private val view: RegistroCursoActivity) {
 
     fun buscarAlumnoPorMatricula(matricula: String) {
         if (matricula.isEmpty()) {
-            view.autocompletarCorreo("")
+            view.autocompletarCorreo("","")
             return
         }
 
@@ -73,12 +73,14 @@ class clsPresentadorRegistroCurso(private val view: RegistroCursoActivity) {
                 if (respuesta.isSuccessful && respuesta.body() != null) {
                     val alumno = respuesta.body()
                     val correoObtenido = alumno?.correo ?: ""
-                    view.autocompletarCorreo(correoObtenido)
+                    val nombreObtenido= alumno?.nombre ?:""
+                    view.autocompletarCorreo(nombreObtenido,correoObtenido)
+
                 } else {
-                    view.autocompletarCorreo("")
+                    view.autocompletarCorreo("","")
                 }
             } catch (_: Exception) {
-                view.autocompletarCorreo("")
+                view.autocompletarCorreo("","")
             }
         }
     }

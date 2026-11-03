@@ -137,7 +137,8 @@ class RegistroCursoActivity : AppCompatActivity() {
         datePicker.show()
     }
 
-    fun autocompletarCorreo(correo: String) {
+    fun autocompletarCorreo(nombre: String,correo: String ) {
+        txtNombreAlumno.setText(nombre)
         etCorreo.setText(correo)
     }
 }
