@@ -76,6 +76,7 @@ class RegistroCursoActivity : AppCompatActivity() {
                 if (matricula.length >= 8) {
                     presenter.buscarAlumnoPorMatricula(matricula)
                 } else {
+                    txtNombreAlumno.setText("")
                     etCorreo.setText("")
                 }
             }
@@ -104,7 +105,7 @@ class RegistroCursoActivity : AppCompatActivity() {
     }
 
     fun mostrarImagenCurso(urlImagen: String) {
-        val baseUrl = "http://172.20.10.9/cursos_api/"
+        val baseUrl = "http://172.20.10.3/cursos_api/"
         val urlCompleta = if (urlImagen.startsWith("http://") || urlImagen.startsWith("https://")) {
             urlImagen
         } else {
