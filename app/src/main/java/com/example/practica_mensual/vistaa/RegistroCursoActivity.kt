@@ -104,7 +104,7 @@ class RegistroCursoActivity : AppCompatActivity() {
     }
 
     fun mostrarImagenCurso(urlImagen: String) {
-        val baseUrl = "http://172.20.10.2/cursos_api/"
+        val baseUrl = "http://172.20.10.9/cursos_api/"
         val urlCompleta = if (urlImagen.startsWith("http://") || urlImagen.startsWith("https://")) {
             urlImagen
         } else {

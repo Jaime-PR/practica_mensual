@@ -3,27 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="4dp">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:id="@+id/cardCurso"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="4dp"
-        android:layout_marginVertical="4dp"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="3dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="12dp">
 
-            <!-- Imagen con tamaño fijo -->
+
             <ImageView
                 android:id="@+id/imgCurso"
                 android:layout_width="90dp"
@@ -32,11 +34,11 @@
                 android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
-            <!-- Nombre del curso: Altura fija y máximo 2 líneas para alinear todas las tarjetas -->
+
             <TextView
                 android:id="@+id/txtMostrarNombreCurso"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="34dp"
                 android:layout_marginTop="6dp"
                 android:ellipsize="end"
                 android:gravity="center"
@@ -45,7 +47,7 @@
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
-            <!-- Salón: Altura fija y 1 sola línea -->
+
             <TextView
                 android:id="@+id/txtSalon"
                 android:layout_width="match_parent"
@@ -58,7 +60,7 @@
                 android:textColor="@android:color/darker_gray"
                 android:textSize="11sp" />
 
-            <!-- Botones alineados en la parte inferior -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,7 +70,7 @@
                 <Button
                     android:id="@+id/btnDetalle"
                     android:layout_width="0dp"
-                    android:layout_height="48dp"
+                    android:layout_height="30dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:backgroundTint="#3F51B5"
@@ -84,7 +86,7 @@
                 <Button
                     android:id="@+id/btnRegistro"
                     android:layout_width="0dp"
-                    android:layout_height="48dp"
+                    android:layout_height="30dp"
                     android:layout_marginStart="2dp"
                     android:layout_weight="1"
                     android:backgroundTint="#4CAF50"
