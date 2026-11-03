@@ -25,13 +25,6 @@ class clsCarreraPresentador(private val vistaa: VerRegistros) {
     }
 
     fun seleccionarCarrera(idCarrera: Int){
-        val carrera = listaCarreras.find { it.id == idCarrera }
-
-        if (carrera != null) {
-            vistaa.mostrarMensajeExito(carrera.id, carrera.carrera)
-        } else {
-            vistaa.mostrarMensajeExito(idCarrera, "Todas las carreras")
-        }
         obtenerEstadoInscripciones(idCarrera)
     }
 
