@@ -117,37 +117,11 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- NOMBRE DEL ALUMNO -->
+            <!-- 1. MATRÍCULA -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:letterSpacing="0.06"
-                android:text="NOMBRE DEL ALUMNO:"
-                android:textColor="#154273"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/txtNombreAlumno"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="6dp"
-                android:autofillHints="name"
-                android:background="@drawable/bg_campo"
-                android:hint="Ej. Juan Pérez"
-                android:inputType="textPersonName"
-                android:paddingHorizontal="16dp"
-                android:textColor="#1B1F27"
-                android:textColorHint="#7A8699"
-                android:textSize="14sp" />
-
-            <!-- MATRÍCULA -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:letterSpacing="0.06"
                 android:text="@string/matr_cula_del_alumno"
@@ -169,7 +143,59 @@
                 android:textColorHint="#7A8699"
                 android:textSize="14sp" />
 
-            <!-- FECHA -->
+            <!-- 2. NOMBRE DEL ALUMNO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.06"
+                android:text="NOMBRE DEL ALUMNO:"
+                android:textColor="#154273"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtNombreAlumno"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:autofillHints="name"
+                android:background="@drawable/bg_campo"
+                android:hint="Ej. Juan Pérez"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="16dp"
+                android:textColor="#1B1F27"
+                android:textColorHint="#7A8699"
+                android:textSize="14sp" />
+
+            <!-- 3. CORREO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.06"
+                android:text="@string/correo_institucional"
+                android:textColor="#154273"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/bg_campo"
+                android:hint="20281015@uthh.edu.mx"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="16dp"
+                android:textColor="#1B1F27"
+                android:textColorHint="#7A8699"
+                android:textSize="14sp" />
+
+            <!-- 4. FECHA -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -193,32 +219,6 @@
                 android:focusable="false"
                 android:hint="@string/dd_mm_aaaa"
                 android:inputType="none"
-                android:paddingHorizontal="16dp"
-                android:textColor="#1B1F27"
-                android:textColorHint="#7A8699"
-                android:textSize="14sp" />
-
-            <!-- CORREO -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="sans-serif-medium"
-                android:letterSpacing="0.06"
-                android:text="@string/correo_institucional"
-                android:textColor="#154273"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/etCorreo"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="6dp"
-                android:autofillHints="emailAddress"
-                android:background="@drawable/bg_campo"
-                android:hint="20281015@uthh.edu.mx"
-                android:inputType="textEmailAddress"
                 android:paddingHorizontal="16dp"
                 android:textColor="#1B1F27"
                 android:textColorHint="#7A8699"
